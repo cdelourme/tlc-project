@@ -4,3 +4,7 @@ appengine-generated/
 \.project
 
 \.classpath
+
+\.settings/
+
+\.target/
