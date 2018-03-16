@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<datastore-indexes autoGenerate="false">
-    <datastore-index kind="Advertisement" ancestor="false">
-        <property name="price" direction="desc" />
-        <property name="title" direction="desc" />
-    </datastore-index>
-</datastore-indexes>

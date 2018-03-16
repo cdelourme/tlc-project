@@ -1,6 +1,7 @@
 package tlc.project.servlet;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.annotation.WebServlet;
@@ -35,6 +36,7 @@ public class ApiAdvertisementServlet extends HttpServlet {
 		String content = request.getParameter("content");
 		
 		List<Advertisement> advs = mapper.readValue(content, new TypeReference<List<Advertisement>>(){});
+		advs.stream().forEach(p->p.setDate(new Date()));
 		advService.add(advs);
 
 		response.sendRedirect("/home.jsp");
@@ -42,7 +44,7 @@ public class ApiAdvertisementServlet extends HttpServlet {
 	}
 	
 	@Override
-	public void doDelete(HttpServletRequest request, HttpServletResponse response) 
+	public void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws IOException {
 		System.out.println("DELETE");
 

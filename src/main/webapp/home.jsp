@@ -104,7 +104,7 @@
    		</div>
 	</form>
 	
-	<form action="/api/advertisement" method="post">
+	<form action="/api/advertisement" method="get">
 		<div>
     		<input type="hidden" name="content" value="${fn:escapeXml(json_advs)}"/>
    		</div>
